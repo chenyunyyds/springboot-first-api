@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     private final TestService testService;
 
-    public TestController(TestService testService){
+    public TestController(TestService testService) {
         this.testService = testService;
     }
+
     @GetMapping("/one")
     public String one() {
         return testService.one();
@@ -24,5 +25,11 @@ public class TestController {
     @GetMapping("/xiao")
     public String xiao() {
         return testService.xiao();
+    }
+
+
+    @GetMapping("/login")
+    public String login() {
+        return "登录功能开发中";
     }
 }
